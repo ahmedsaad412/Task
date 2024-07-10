@@ -1,0 +1,63 @@
+<form [formGroup]="myForm">
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="Alphanumeric"
+              placeholder="Enter Alphanumeric"
+              id="Alphanumeric"
+            />
+            <label for="Alphanumeric">Alphanumeric</label>
+            <div
+              *ngIf="myForm.get('Alphanumeric')?.errors?.['pattern'] && (myForm.get('Alphanumeric')?.dirty || myForm.get('Alphanumeric')?.touched)"
+              class="text-danger"
+            >
+              Special characters will be restricted!
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="OnlyLetters"
+              placeholder="Enter Only Letters"
+              id="OnlyLetters"
+            />
+            <label for="OnlyLetters">Only Letters</label>
+            <div
+              *ngIf="myForm.get('OnlyLetters')?.errors?.['pattern'] && (myForm.get('OnlyLetters')?.dirty || myForm.get('OnlyLetters')?.touched)"
+              class="text-danger"
+            >
+              Numbers will not be allowed!
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              formControlName="NoArabicLetters"
+              placeholder="Enter No Arabic Letters"
+              id="NoArabicLetters"
+            />
+            <label for="NoArabicLetters">No Arabic Letters</label>
+            <div
+              *ngIf="myForm.get('NoArabicLetters')?.errors?.['pattern'] && (myForm.get('NoArabicLetters')?.dirty || myForm.get('NoArabicLetters')?.touched)"
+              class="text-danger"
+            >
+              Arabic characters will not be allowed!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  
