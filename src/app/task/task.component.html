@@ -1,0 +1,42 @@
+
+
+        <div class="row mt-3">
+                    <div class="col-md-3 col-12 form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          required
+                          formControlName="Alphanumeric"
+                          placeholder=""
+                          id="Alphanumeric"
+                          (keydown)='Alphanumeric($event)'
+                        />
+                        <label for="Alphanumeric">  Alphanumeric</label>
+                      </div>
+                      <div class="col-md-3 col-12 form-floating">
+                            <input
+                              type="text"
+                              class="form-control"
+                              required
+                              formControlName="OnlyLetters"
+                              placeholder=""
+                              id="OnlyLetters"
+                              (keydown)='OnlyLetters($event)'
+                            />
+                            <label for="OnlyLetters">  Only Letters</label>
+                          </div>
+                          <div class="col-md-3 col-12 form-floating">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  required
+                                  formControlName="NoArabicLetters"
+                                  placeholder=""
+                                  id="NoArabicLetters"
+                                  (keydown)='NoArabicLetters($event)'
+                                />
+                                <label for="NoArabicLetters">  No Arabic Letters</label>
+                              </div>
+           
+           </div>
+        

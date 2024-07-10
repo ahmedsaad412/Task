@@ -1,0 +1,24 @@
+.container{
+    border:2px solid black;
+    margin: 50px auto;
+    text-align: center;
+
+}
+.container input {
+  border: 0px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+}
+.container label {
+    right: 0;
+    left: auto;
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .container input:focus + label{
+    color: rgb(35, 130, 9);
+    font-weight: bold;
+  }
